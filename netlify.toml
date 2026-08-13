@@ -1,0 +1,40 @@
+# Site estático, sem build step: o Netlify publica a pasta como ela está.
+[build]
+  publish = "."
+  command = ""
+
+# As fontes são imutáveis: o nome do arquivo só muda se a fonte mudar.
+[[headers]]
+  for = "/assets/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# CSS e JS não têm hash no nome — cachear por muito tempo publicaria
+# uma versão velha depois de cada correção. Revalida sempre.
+[[headers]]
+  for = "/assets/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/assets/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/assets/img/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+    # TEMPORÁRIO — enquanto o site for protótipo (fotos, preços e CRN ainda
+    # são placeholders). Remover esta linha antes da publicação oficial,
+    # senão o site nunca aparece nas buscas.
+    X-Robots-Tag = "noindex"
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=(), interest-cohort=()"

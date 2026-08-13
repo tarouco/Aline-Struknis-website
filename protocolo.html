@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Protocolos — com caneta e sem caneta | Método Strunkis</title>
+<meta name="description" content="Dois protocolos nutricionais do Método Strunkis: acompanhamento para quem usa análogos de GLP-1 e reeducação alimentar para quem emagrece sem medicação.">
+<meta name="theme-color" content="#F6F3EC">
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/bodoni-moda-latin-opsz-normal.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/hanken-grotesk-latin-wght-normal.woff2" crossorigin>
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<!--
+  seed a841c555 · FORM: padrão da categoria, executado no acabamento de clínica premium.
+  THESIS: a página não vende um curso, ela responde uma pergunta clínica. Duas colunas de
+  protocolo que se trocam no mesmo lugar, para a visitante ver que o método é um só.
+  OWN-WORLD: papel off-white, campo de oliva para o painel da caneta, fio dourado, Bodoni
+  no display. Sem contador, sem promessa de número.
+  STORY: ela escolhe a trilha, entende o que muda no plano, vê o que está incluso e o que
+  o protocolo não faz, e vai para o projeto.
+  FIRST VIEWPORT: título, seletor de trilha em pílula logo abaixo, e o painel abrindo já
+  com o parágrafo que explica a diferença.
+  FORM: canônico. FINISH: unreviewed and undocumented is unfinished; this build ends with
+  the finish review, the verdict, and DESIGN.md
+-->
+<a class="skip" href="#main">Pular para o conteúdo</a>
+
+<header class="site-head">
+  <div class="wrap site-head__inner">
+    <a class="wordmark" href="index.html"><b>Aline Strunkis</b><span>Nutrição de resultado</span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Abrir menu" aria-controls="nav"></button>
+    <nav class="site-nav" id="nav" aria-label="Principal">
+      <a href="index.html#metodo">O método</a>
+      <a href="protocolo.html" aria-current="page">Protocolos</a>
+      <a href="index.html#resultados">Resultados</a>
+      <a href="curso.html">Projetos</a>
+      <a href="index.html#boost">Boost</a>
+      <a href="parceiras.html">Para nutricionistas</a>
+      <a class="btn btn--sm" href="index.html#recomendador">Agendar avaliação</a>
+    </nav>
+    <a class="btn btn--sm btn--head" href="index.html#recomendador">Agendar avaliação</a>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="sec sec--tight wrap">
+    <div class="sec-head">
+      <h1 class="display-l">Um método, dois protocolos</h1>
+    </div>
+    <p class="lede" style="max-width:60ch">A conta de proteína, o desenho das fases e a medida por
+      bioimpedância são iguais nos dois caminhos. O que muda é como o plano lida com a fome —
+      quando ela é suprimida por fármaco e quando ela precisa ser construída na comida.</p>
+
+    <div style="margin-top: var(--s-7)" data-tabs>
+      <div class="tabs" role="tablist" aria-label="Escolha o protocolo">
+        <button class="tab" role="tab" id="aba-caneta" aria-controls="painel-caneta" aria-selected="true">Com caneta</button>
+        <button class="tab" role="tab" id="aba-natural" aria-controls="painel-natural" aria-selected="false" tabindex="-1">Sem medicação</button>
+      </div>
+
+      <!-- PAINEL CANETA -->
+      <div class="tabpanel" id="painel-caneta" role="tabpanel" aria-labelledby="aba-caneta" tabindex="0">
+        <div class="cols-2" style="margin-top: var(--s-7)">
+          <div class="stack-lg">
+            <h2 class="display-m">A caneta tira a fome. Ela não escolhe o que você perde.</h2>
+            <hr class="rule">
+            <p>Com análogos de GLP-1 a ingestão despenca sem esforço, e é justamente aí que a massa
+              magra vai junto: come-se menos de tudo, inclusive proteína. O protocolo com caneta
+              existe para garantir que, dentro de um volume de comida menor, a proteína e os
+              micronutrientes continuem entrando.</p>
+            <p>O acompanhamento também cobre o que ninguém avisa: o dia seguinte à aplicação, o
+              enjoo, a constipação, a comida que passou a repugnar — e o plano de manutenção para
+              quando o medicamento terminar.</p>
+          </div>
+          <figure class="plate plate--branch ratio-43" data-reveal>
+            <img src="assets/img/protocolo-caneta.webp" alt="Rotina alimentar durante o uso de análogos de GLP-1">
+            <figcaption class="plate__note" hidden><span data-icon="camera"></span>Foto · substituir</figcaption>
+          </figure>
+        </div>
+
+        <div class="phases" style="margin-top: clamp(40px, 6vw, 72px)">
+          <article class="phase">
+            <span class="phase__when">Proteína primeiro</span>
+            <h3>A ordem do prato muda</h3>
+            <p class="small">Com pouco espaço de estômago, a proteína entra antes. O plano define
+              o mínimo diário e como alcançá-lo nos dias ruins.</p>
+          </article>
+          <article class="phase">
+            <span class="phase__when">Dias de aplicação</span>
+            <h3>Cardápio de baixa tolerância</h3>
+            <p class="small">Uma lista curta de refeições que passam nos dias de enjoo, sem
+              perder o alvo de proteína e hidratação.</p>
+          </article>
+          <article class="phase">
+            <span class="phase__when">Saída do fármaco</span>
+            <h3>O plano de manutenção</h3>
+            <p class="small">A fome volta. O protocolo prepara essa volta com antecedência, para
+              o resultado não desmanchar em três meses.</p>
+          </article>
+        </div>
+
+        <div class="notice" style="margin-top: var(--s-7)">
+          <span data-icon="info"></span>
+          <p><b>O que este protocolo não é.</b> A Aline é nutricionista. Ela não prescreve, não
+            indica e não ajusta dose de nenhum medicamento — isso é do seu médico. O que ela faz é
+            a nutrição que acompanha o tratamento que o seu médico já prescreveu.</p>
+        </div>
+      </div>
+
+      <!-- PAINEL NATURAL -->
+      <div class="tabpanel" id="painel-natural" role="tabpanel" aria-labelledby="aba-natural" tabindex="0" hidden>
+        <div class="cols-2" style="margin-top: var(--s-7)">
+          <div class="stack-lg">
+            <h2 class="display-m">Sem fármaco, a saciedade tem que ser construída.</h2>
+            <hr class="rule">
+            <p>Aqui o trabalho é outro: o prato precisa segurar a fome sozinho, e o comportamento
+              precisa mudar junto. Volume, fibra, proteína e gordura boa organizados para que a
+              paciente termine a refeição satisfeita, e não contando as horas até a próxima.</p>
+            <p>É o caminho mais antigo do consultório e o mais reeducativo. Também é o mais exigente
+              nos dois primeiros meses, e por isso vem com suporte psicológico e acompanhamento
+              de rotina, não só com cardápio.</p>
+          </div>
+          <figure class="plate plate--light plate--branch ratio-43" data-reveal>
+            <img src="assets/img/protocolo-natural.webp" alt="Refeição de saciedade construída sem medicação">
+            <figcaption class="plate__note" hidden><span data-icon="camera"></span>Foto · substituir</figcaption>
+          </figure>
+        </div>
+
+        <div class="phases" style="margin-top: clamp(40px, 6vw, 72px)">
+          <article class="phase">
+            <span class="phase__when">Prato de saciedade</span>
+            <h3>Volume antes de restrição</h3>
+            <p class="small">Refeições desenhadas para encher o prato e o estômago, com densidade
+              calórica controlada em vez de porção minúscula.</p>
+          </article>
+          <article class="phase">
+            <span class="phase__when">Comportamento</span>
+            <h3>O episódio da noite</h3>
+            <p class="small">A maior parte dos planos quebra entre 20h e 23h. Esse horário tem
+              estratégia própria, com apoio psicológico.</p>
+          </article>
+          <article class="phase">
+            <span class="phase__when">Vida real</span>
+            <h3>Mercado, rótulo, restaurante</h3>
+            <p class="small">Lista de compras, leitura de rótulo e regras para comer fora sem
+              recomeçar do zero na segunda-feira.</p>
+          </article>
+        </div>
+
+        <div class="notice" style="margin-top: var(--s-7)">
+          <span data-icon="info"></span>
+          <p><b>Sobre contraindicação.</b> Quem tem condição clínica, usa medicação contínua, está
+            gestante ou amamentando precisa de avaliação individual antes de começar qualquer
+            plano. Isso é conversado na primeira consulta, não pulado.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPARATIVO -->
+  <section class="sec sec--sunk">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 class="display-l">O que é igual e o que muda</h2>
+      </div>
+      <div style="overflow-x:auto">
+        <table class="table">
+          <caption class="sr-only">Comparação entre o protocolo com caneta e o protocolo sem medicação</caption>
+          <thead>
+            <tr><th scope="col">No plano</th><th scope="col">Com caneta</th><th scope="col">Sem medicação</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Alvo de proteína</th><td>Alto e não negociável, mesmo com pouco apetite</td><td>Alto, distribuído para gerar saciedade</td></tr>
+            <tr><th scope="row">Volume das refeições</th><td>Reduzido, com densidade nutricional alta</td><td>Maior, com fibra e água para encher o prato</td></tr>
+            <tr><th scope="row">Maior risco</th><td>Perder massa magra e reganhar ao parar</td><td>Abandonar o plano na terceira semana</td></tr>
+            <tr><th scope="row">Suporte psicológico</th><td>Incluído</td><td>Incluído</td></tr>
+            <tr><th scope="row">Bioimpedância</th><td>A cada virada de fase</td><td>A cada virada de fase</td></tr>
+            <tr><th scope="row">Fases</th><td>60 dias cada</td><td>60 dias cada</td></tr>
+            <tr><th scope="row">Boost no protocolo</th><td>Barra proteica e bebida funcional</td><td>Chocolate funcional e mix de fibra</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec sec--olive">
+    <div class="wrap cols-2">
+      <div class="stack-lg">
+        <h2 class="display-l">Não sabe em qual trilha você está?</h2>
+        <hr class="rule">
+        <p>O recomendador faz quatro perguntas e devolve a trilha, o projeto e os produtos Boost
+          que combinam com a sua rotina.</p>
+        <div class="flow-gap">
+          <a class="btn btn--light" href="index.html#recomendador">Fazer as quatro perguntas</a>
+          <a class="btn btn--ghost" href="curso.html">Ver os projetos</a>
+        </div>
+      </div>
+      <p class="signature" style="color:var(--gold-300);align-self:center">Com amor,<br>Aline Strunkis</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="wordmark" href="index.html" style="color:var(--on-dark)">
+          <b>Aline Strunkis</b><span style="color:var(--olive-300)">Nutrição de resultado</span>
+        </a>
+        <p class="small" style="margin-top:var(--s-4);max-width:32ch">Clínica Strunkis · Porto Alegre,
+          Rio Grande do Sul. Atendimento presencial e projetos online para todo o Brasil.</p>
+      </div>
+      <div>
+        <h3>Protocolos</h3>
+        <ul>
+          <li><a href="protocolo.html#painel-caneta">Com caneta</a></li>
+          <li><a href="protocolo.html#painel-natural">Sem medicação</a></li>
+          <li><a href="#metodo">O Método Strunkis</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Projetos</h3>
+        <ul>
+          <li><a href="curso.html">Strunkis Premium</a></li>
+          <li><a href="curso.html">Projeto Renascer</a></li>
+          <li><a href="curso.html">Strunkis Para Todos</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Parcerias</h3>
+        <ul>
+          <li><a href="parceiras.html">Rede de nutricionistas</a></li>
+          <li><a href="parceiras.html#revenda">Revenda Boost</a></li>
+          <li><a href="design-system.html">Sistema de design</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <p>© <span data-year></span> Aline dos Santos Strunkis Castro · CRN a informar</p>
+      <p style="max-width:60ch">Este site é conteúdo nutricional e educativo. Não prescreve, não
+        indica e não substitui medicamento, consulta médica ou acompanhamento profissional
+        individual. Análogos de GLP-1 são de prescrição médica.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+</body>
+</html>
