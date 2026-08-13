@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aline Strunkis — Nutrição de Resultado | Método Strunkis</title>
+<meta name="description" content="Perder gordura sem perder massa magra. O Método Strunkis acompanha quem emagrece com caneta e quem emagrece sem. Clínica Strunkis, Porto Alegre.">
+<meta name="theme-color" content="#F6F3EC">
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/bodoni-moda-latin-opsz-normal.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/hanken-grotesk-latin-wght-normal.woff2" crossorigin>
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<!--
+  seed a841c555 · FORM: padrão da categoria (a saída permanente), escolhido pelo usuário
+  sobre as direções sorteadas. Régua: clínicas de estética premium brasileiras.
+  THESIS: um consultório, não um funil. O site recusa a página de vendas de infoproduto
+  (contador, amarelo, promessa de número) e organiza tudo em volta de uma única pergunta
+  clínica: você emagrece com caneta ou sem?
+  OWN-WORLD: papel off-white quente, campos inteiros de oliva profundo, fio dourado de 1px,
+  Bodoni Moda no display e Hanken Grotesk no texto; placas de foto com gravura botânica;
+  Boost é dono de uma faixa quente e de nenhuma outra.
+  STORY: ela se reconhece na bifurcação, entende que o produto é massa magra, vê prova
+  fotográfica, recebe um protocolo do recomendador e compra o projeto certo.
+  FIRST VIEWPORT: título em duas linhas à esquerda ocupando metade da tela, assinatura
+  manuscrita sob o fio dourado, dois botões (protocolo / projetos), placa de foto alta
+  à direita sangrando até a borda da coluna.
+  FORM: candidato canônico; sorteio caiu no 4 (bula/posologia) e foi recusado pelo usuário.
+  FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review,
+  the verdict, and DESIGN.md
+-->
+<a class="skip" href="#main">Pular para o conteúdo</a>
+
+<header class="site-head">
+  <div class="wrap site-head__inner">
+    <a class="wordmark" href="index.html">
+      <b>Aline Strunkis</b>
+      <span>Nutrição de resultado</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Abrir menu" aria-controls="nav"></button>
+    <nav class="site-nav" id="nav" aria-label="Principal">
+      <a href="#metodo">O método</a>
+      <a href="protocolo.html">Protocolos</a>
+      <a href="#resultados">Resultados</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#boost">Boost</a>
+      <a href="parceiras.html">Para nutricionistas</a>
+      <a class="btn btn--sm" href="#recomendador">Agendar avaliação</a>
+    </nav>
+    <a class="btn btn--sm btn--head" href="#recomendador">Agendar avaliação</a>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero wrap">
+    <div class="hero__grid">
+      <div>
+        <h1 class="display-xl hero__title">Perder gordura.<br>Sem perder<br><em>massa magra</em>.</h1>
+        <p class="lede">Essa frase é o Método Strunkis inteiro. Há doze anos ela orienta cada plano
+          alimentar que sai da Clínica Strunkis, em Porto Alegre — e agora orienta dois caminhos
+          diferentes: o de quem emagrece com caneta e o de quem emagrece sem.</p>
+        <div class="hero__actions">
+          <a class="btn" href="#recomendador">Descobrir meu protocolo</a>
+          <a class="btn btn--ghost" href="#projetos">Ver os projetos</a>
+        </div>
+        <ul class="hero__meta">
+          <li data-icon="clinic">Clínica Strunkis · Porto Alegre, RS</li>
+          <li data-icon="users">Equipe multidisciplinar</li>
+          <li data-icon="scale">Bioimpedância em cada fase</li>
+        </ul>
+      </div>
+      <figure class="plate plate--branch ratio-45 hero__media" data-reveal>
+        <img src="assets/img/hero.webp" alt="Mesa posta com prato equilibrado do Método Strunkis">
+        <figcaption class="plate__note" hidden><span data-icon="camera"></span>Foto de abertura · substituir</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- BIFURCAÇÃO -->
+  <section class="paths" aria-label="Escolha sua trilha">
+    <a class="path path--pen" href="protocolo.html#painel-caneta">
+      <span class="tag" data-icon="pen">Trilha 1</span>
+      <h2 class="display-m">Eu uso caneta</h2>
+      <p>Análogos de GLP-1 tiram a fome. O problema é o que sai junto com a gordura quando
+        ninguém organiza a proteína. Aqui o plano é montado em volta do fármaco.</p>
+      <ul class="path__list">
+        <li>Proteína calculada para segurar massa magra durante a perda</li>
+        <li>Manejo dos dias de menos apetite e de efeito colateral</li>
+        <li>Estratégia de manutenção para quando a caneta terminar</li>
+      </ul>
+      <span class="path__go">Ver o protocolo com caneta <span data-icon="arrow"></span></span>
+    </a>
+    <a class="path" href="protocolo.html#painel-natural">
+      <span class="tag" data-icon="leaf">Trilha 2</span>
+      <h2 class="display-m">Eu não uso caneta</h2>
+      <p>Sem fármaco, a saciedade tem que vir da comida e o resultado tem que vir do
+        comportamento. É o caminho mais antigo do consultório e o mais reeducativo.</p>
+      <ul class="path__list">
+        <li>Saciedade construída no prato, não em cápsula</li>
+        <li>Reeducação alimentar com acompanhamento psicológico</li>
+        <li>Leitura de rótulo, compras e rotina fora de casa</li>
+      </ul>
+      <span class="path__go">Ver o protocolo sem medicação <span data-icon="arrow"></span></span>
+    </a>
+  </section>
+
+  <!-- MÉTODO -->
+  <section class="sec wrap" id="metodo">
+    <div class="cols-2 cols-2--lead">
+      <div class="stack-lg">
+        <h2 class="display-l">A balança mente.<br>A bioimpedância&nbsp;não.</h2>
+        <hr class="rule">
+        <p>Dieta que só tira número da balança tira músculo junto. O Método Strunkis foi
+          construído para o contrário: fases longas o suficiente para o corpo mudar de
+          composição, medidas em cada virada de fase, e ajuste do plano a partir do que
+          a medida mostrou — não do que a paciente achou.</p>
+        <p>É o mesmo método aplicado no consultório e nos projetos online. O que muda é a
+          intensidade do acompanhamento.</p>
+        <a class="link-arrow" href="protocolo.html">Como o método se aplica em cada trilha <span data-icon="arrow"></span></a>
+      </div>
+      <figure class="plate plate--light plate--branch ratio-43" data-reveal>
+        <img src="assets/img/ingredientes.webp" alt="Ingredientes íntegros usados nos planos alimentares">
+        <figcaption class="plate__note" hidden><span data-icon="camera"></span>Foto de alimentos · substituir</figcaption>
+      </figure>
+    </div>
+
+    <div class="phases" style="margin-top: clamp(40px, 6vw, 80px)">
+      <article class="phase" data-reveal>
+        <span class="phase__when">Fase 1 · 60 dias</span>
+        <h3>Tirar o que atrapalha</h3>
+        <p class="small">Plano alimentar inicial, correção de rotina e das lacunas de nutriente.
+          Primeira bioimpedância como linha de base.</p>
+      </article>
+      <article class="phase" data-reveal>
+        <span class="phase__when">Fase 2 · 60 dias</span>
+        <h3>Perder gordura com proteína alta</h3>
+        <p class="small">O plano é refeito a partir da medida da fase anterior. Suplementação e
+          treino entram para proteger a massa magra.</p>
+      </article>
+      <article class="phase" data-reveal>
+        <span class="phase__when">Fase 3 · 60 dias</span>
+        <h3>Sustentar o resultado</h3>
+        <p class="small">Manutenção, ampliação do cardápio e as regras de vida real: viagem,
+          restaurante, fim de semana, fim do fármaco.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- RECOMENDADOR -->
+  <section class="sec sec--olive" id="recomendador">
+    <div class="wrap">
+      <div class="quiz" data-quiz>
+        <div class="sec-head" style="max-width:none">
+          <h2 class="display-l">Quatro perguntas e eu te digo por onde começar</h2>
+          <p>O recomendador cruza suas respostas com os protocolos do método e indica o projeto,
+            a trilha e os produtos Boost que combinam com a sua rotina.</p>
+        </div>
+
+        <div class="quiz__bar" role="presentation"><i></i></div>
+
+        <div class="quiz__step" data-key="caneta" data-active="true">
+          <h3 class="display-m quiz__q">Você está usando caneta emagrecedora?</h3>
+          <div class="quiz__opts">
+            <button class="quiz__opt" type="button" aria-pressed="false" data-value="sim">
+              <b>Sim, com prescrição médica<span>Ozempic, Mounjaro, Saxenda ou similar</span></b></button>
+            <button class="quiz__opt" type="button" aria-pressed="false" data-value="nao">
+              <b>Não uso<span>Quero emagrecer sem medicação</span></b></button>
+            <button class="quiz__opt" type="button" aria-pressed="false" data-value="parei">
+              <b>Usei e parei<span>Quero segurar o resultado agora</span></b></button>
+          </div>
+        </div>
+
+        <div class="quiz__step" data-key="meta">
+          <h3 class="display-m quiz__q">O que você quer que mude primeiro?</h3>
+          <div class="quiz__opts">
+            <button class="quiz__opt" type="button" aria-pressed="false" data-value="gordura">
+              <b>Perder gordura<span>Meu foco agora é reduzir percentual de gordura</span></b></button>
+            <button class="quiz__opt" type="button" aria-pressed="false" data-value="hipertrofia">
+              <b>Ganhar músculo e definir<span>Já emagreci, quero composição corporal</span></b></button>
+            <button class="quiz__opt" type="button" aria-pressed="false" data-value="saude">
+              <b>Reorganizar a alimentação<span>Exames, energia e rotina antes da estética</span></b></button>
+          </div>
+        </div>
+
+        <div class="quiz__step" data-key="tempo">
+          <h3 class="display-m quiz__q">Quanto tempo você quer ser acompanhada?</h3>
+          <div class="quiz__opts">
+            <button class="quiz__opt" type="button" aria-pressed="false" data-value="curto">
+              <b>Dois meses<span>Quero um ciclo fechado, com começo e fim</span></b></button>
+            <button class="quiz__opt" type="button" aria-pressed="false" data-value="longo">
+              <b>Um ano<span>Quero atravessar todas as fases com acompanhamento</span></b></button>
+          </div>
+        </div>
+
+        <div class="quiz__step" data-key="local">
+          <h3 class="display-m quiz__q">Como você prefere ser atendida?</h3>
+          <div class="quiz__opts">
+            <button class="quiz__opt" type="button" aria-pressed="false" data-value="online">
+              <b>Online<span>Estou fora de Porto Alegre ou prefiro à distância</span></b></button>
+            <button class="quiz__opt" type="button" aria-pressed="false" data-value="presencial">
+              <b>Presencial na clínica<span>Consigo ir até a Clínica Strunkis</span></b></button>
+          </div>
+        </div>
+
+        <div class="quiz__nav">
+          <button class="btn btn--ghost btn--sm" type="button" data-quiz-back disabled hidden>Voltar</button>
+          <span class="quiz__count">Pergunta 1 de 4</span>
+        </div>
+
+        <div class="quiz__result" tabindex="-1"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESULTADOS -->
+  <section class="sec wrap" id="resultados">
+    <div class="sec-head">
+      <h2 class="display-l">Doze anos de antes e depois</h2>
+      <p class="lede">O acervo da Aline é o ativo mais forte da marca. Cada caso entra aqui com a
+        trilha que a pessoa seguiu e o tempo que levou. <span data-count>6 casos</span> publicados.</p>
+    </div>
+
+    <div class="filters" data-filters role="group" aria-label="Filtrar casos">
+      <button class="chip" type="button" data-filter="todos" aria-pressed="true">Todos</button>
+      <button class="chip" type="button" data-filter="caneta" aria-pressed="false">Com caneta</button>
+      <button class="chip" type="button" data-filter="natural" aria-pressed="false">Sem medicação</button>
+      <button class="chip" type="button" data-filter="definicao" aria-pressed="false">Definição</button>
+      <button class="chip" type="button" data-filter="pos" aria-pressed="false">Pós-parto</button>
+    </div>
+
+    <div class="gallery">
+      <article class="result" data-cat="caneta" data-reveal>
+        <div class="result__pair">
+          <figure class="plate plate--light ratio-45"><span class="badge-ab">Antes</span>
+            <img src="assets/img/caso-1a.webp" alt="Registro inicial do caso 1"></figure>
+          <figure class="plate plate--light ratio-45"><span class="badge-ab">Depois</span>
+            <img src="assets/img/caso-1b.webp" alt="Registro final do caso 1"></figure>
+        </div>
+        <div class="result__cap"><b>Com caneta · 6 meses</b><span class="micro">Foco: massa magra</span></div>
+      </article>
+      <article class="result" data-cat="natural" data-reveal>
+        <div class="result__pair">
+          <figure class="plate plate--light ratio-45"><span class="badge-ab">Antes</span>
+            <img src="assets/img/caso-2a.webp" alt="Registro inicial do caso 2"></figure>
+          <figure class="plate plate--light ratio-45"><span class="badge-ab">Depois</span>
+            <img src="assets/img/caso-2b.webp" alt="Registro final do caso 2"></figure>
+        </div>
+        <div class="result__cap"><b>Sem medicação · 8 meses</b><span class="micro">Reeducação</span></div>
+      </article>
+      <article class="result" data-cat="definicao natural" data-reveal>
+        <div class="result__pair">
+          <figure class="plate plate--light ratio-45"><span class="badge-ab">Antes</span>
+            <img src="assets/img/caso-3a.webp" alt="Registro inicial do caso 3"></figure>
+          <figure class="plate plate--light ratio-45"><span class="badge-ab">Depois</span>
+            <img src="assets/img/caso-3b.webp" alt="Registro final do caso 3"></figure>
+        </div>
+        <div class="result__cap"><b>Definição · 12 meses</b><span class="micro">Renascer</span></div>
+      </article>
+      <article class="result" data-cat="pos natural" data-reveal>
+        <div class="result__pair">
+          <figure class="plate plate--light ratio-45"><span class="badge-ab">Antes</span>
+            <img src="assets/img/caso-4a.webp" alt="Registro inicial do caso 4"></figure>
+          <figure class="plate plate--light ratio-45"><span class="badge-ab">Depois</span>
+            <img src="assets/img/caso-4b.webp" alt="Registro final do caso 4"></figure>
+        </div>
+        <div class="result__cap"><b>Pós-parto · 7 meses</b><span class="micro">Premium</span></div>
+      </article>
+      <article class="result" data-cat="caneta definicao" data-reveal>
+        <div class="result__pair">
+          <figure class="plate plate--light ratio-45"><span class="badge-ab">Antes</span>
+            <img src="assets/img/caso-5a.webp" alt="Registro inicial do caso 5"></figure>
+          <figure class="plate plate--light ratio-45"><span class="badge-ab">Depois</span>
+            <img src="assets/img/caso-5b.webp" alt="Registro final do caso 5"></figure>
+        </div>
+        <div class="result__cap"><b>Com caneta · 10 meses</b><span class="micro">Pós-fármaco</span></div>
+      </article>
+      <article class="result" data-cat="natural" data-reveal>
+        <div class="result__pair">
+          <figure class="plate plate--light ratio-45"><span class="badge-ab">Antes</span>
+            <img src="assets/img/caso-6a.webp" alt="Registro inicial do caso 6"></figure>
+          <figure class="plate plate--light ratio-45"><span class="badge-ab">Depois</span>
+            <img src="assets/img/caso-6b.webp" alt="Registro final do caso 6"></figure>
+        </div>
+        <div class="result__cap"><b>Sem medicação · 5 meses</b><span class="micro">Para Todos</span></div>
+      </article>
+    </div>
+
+    <div class="notice" style="margin-top: var(--s-7)">
+      <span data-icon="info"></span>
+      <p><b>Placeholders.</b> As doze placas acima esperam o acervo real da Aline, com autorização
+        de uso de imagem de cada paciente. Tempo de acompanhamento e trilha ficam na legenda —
+        resultado individual não é promessa de resultado igual.</p>
+    </div>
+  </section>
+
+  <!-- PROJETOS -->
+  <section class="sec sec--sunk" id="projetos">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 class="display-l">Os projetos</h2>
+        <p class="lede">Três formas de entrar no método, do ciclo curto de dois meses à mentoria
+          de um ano inteiro.</p>
+      </div>
+
+      <div class="offers">
+        <article class="offer" data-reveal>
+          <span class="tag">60 dias · presencial</span>
+          <h3 class="display-m">Strunkis Para Todos</h3>
+          <p class="small">Duas consultas presenciais na clínica, com medida e plano. Turmas de
+            até 20 pessoas.</p>
+          <ul class="offer__list">
+            <li><span data-icon="check"></span>Duas consultas presenciais em Porto Alegre</li>
+            <li><span data-icon="check"></span>Bioimpedância e avaliação antropométrica</li>
+            <li><span data-icon="check"></span>Plano alimentar, suplementos e manipulados</li>
+            <li><span data-icon="check"></span>Livro do Método Strunkis e e-book de receitas</li>
+          </ul>
+          <div class="offer__foot">
+            <div class="price"><b>Sob consulta</b><span class="micro">valor a confirmar</span></div>
+            <a class="btn btn--ghost btn--block" href="curso.html">Ver detalhes</a>
+          </div>
+        </article>
+
+        <article class="offer offer--feature" data-reveal>
+          <span class="tag tag--gold">60 dias · online</span>
+          <h3 class="display-m">Strunkis Premium</h3>
+          <p class="small">Mentoria diária no Telegram, com três planos alimentares e mais de
+            300 receitas. O mais procurado.</p>
+          <ul class="offer__list">
+            <li><span data-icon="check"></span>Mentoria diária durante os 60 dias</li>
+            <li><span data-icon="check"></span>Planos para obesidade, emagrecimento e definição</li>
+            <li><span data-icon="check"></span>+300 receitas: light, fitness, funcionais e vegetarianas</li>
+            <li><span data-icon="check"></span>Suporte psicológico e quatro grupos de acompanhamento</li>
+          </ul>
+          <div class="offer__foot">
+            <div class="price"><b>Sob consulta</b><span class="micro">até 12x</span></div>
+            <a class="btn btn--light btn--block" href="curso.html">Quero o Premium</a>
+          </div>
+        </article>
+
+        <article class="offer" data-reveal>
+          <span class="tag">12 meses · completo</span>
+          <h3 class="display-m">Projeto Renascer</h3>
+          <p class="small">As três fases do método, do emagrecimento à hipertrofia, com equipe
+            multidisciplinar junto.</p>
+          <ul class="offer__list">
+            <li><span data-icon="check"></span>Três fases de 60 dias, com plano refeito a cada fase</li>
+            <li><span data-icon="check"></span>Treino com personal trainer acompanhando a curva</li>
+            <li><span data-icon="check"></span>Acompanhamento médico e da equipe da clínica</li>
+            <li><span data-icon="check"></span>Suplementação e manipulados por fase</li>
+          </ul>
+          <div class="offer__foot">
+            <div class="price"><b>Sob consulta</b><span class="micro">valor a confirmar</span></div>
+            <a class="btn btn--ghost btn--block" href="curso.html">Ver detalhes</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOST -->
+  <section class="sec sec--boost" id="boost">
+    <div class="wrap">
+      <div class="cols-2" style="align-items:end">
+        <div class="stack-lg">
+          <h2 class="display-l">Boost Natural Foods entra no plano, não no meio dele</h2>
+          <hr class="rule">
+          <p>A linha de alimentos funcionais da Boost foi escolhida para resolver os três buracos
+            que aparecem em todo plano alimentar: a proteína do lanche, o doce da noite e a fibra
+            que ninguém come. Os produtos aparecem dentro do protocolo, indicados por fase.</p>
+          <div class="flow-gap">
+            <a class="btn btn--boost" href="curso.html#combo">Ver o combo com o curso</a>
+            <a class="btn btn--ghost" href="parceiras.html#revenda">Revender a linha</a>
+          </div>
+        </div>
+        <figure class="plate plate--boost plate--branch ratio-43" data-reveal>
+          <img src="assets/img/boost.webp" alt="Linha de alimentos funcionais Boost Natural Foods">
+          <figcaption class="plate__note" hidden><span data-icon="camera"></span>Foto da linha Boost · substituir</figcaption>
+        </figure>
+      </div>
+
+      <div class="boost-grid" style="margin-top: clamp(40px, 6vw, 72px)">
+        <article class="boost-item" data-reveal>
+          <figure class="plate plate--boost ratio-11">
+            <img src="assets/img/boost-1.webp" alt="Barra proteica Boost">
+            <figcaption class="plate__note" hidden><span data-icon="box"></span>Produto · substituir</figcaption>
+          </figure>
+          <h3>Barra proteica</h3>
+          <p class="small">Para o intervalo entre o treino e o almoço, e para os dias em que a
+            caneta tira a fome e a proteína fica para trás.</p>
+        </article>
+        <article class="boost-item" data-reveal>
+          <figure class="plate plate--boost ratio-11">
+            <img src="assets/img/boost-2.webp" alt="Chocolate funcional Boost">
+            <figcaption class="plate__note" hidden><span data-icon="box"></span>Produto · substituir</figcaption>
+          </figure>
+          <h3>Chocolate funcional</h3>
+          <p class="small">O doce que cabe no plano. Resolve o episódio da noite sem virar
+            escapada de fim de semana.</p>
+        </article>
+        <article class="boost-item" data-reveal>
+          <figure class="plate plate--boost ratio-11">
+            <img src="assets/img/boost-3.webp" alt="Mix funcional Boost">
+            <figcaption class="plate__note" hidden><span data-icon="box"></span>Produto · substituir</figcaption>
+          </figure>
+          <h3>Mix funcional</h3>
+          <p class="small">Fibra e saciedade no lanche da tarde, que é onde a maior parte dos
+            planos alimentares quebra.</p>
+        </article>
+      </div>
+
+      <div class="notice" style="margin-top: var(--s-7)">
+        <span data-icon="info"></span>
+        <p>Nomes, composição, fotos e preços da linha Boost ainda não foram fechados. O que está
+          acima é estrutura de página, não catálogo aprovado.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLÍNICA -->
+  <section class="sec wrap" id="clinica">
+    <div class="cols-2">
+      <figure class="plate plate--light plate--branch ratio-43" data-reveal>
+        <img src="assets/img/clinica.webp" alt="Recepção da Clínica Strunkis em Porto Alegre">
+        <figcaption class="plate__note" hidden><span data-icon="camera"></span>Foto da clínica · substituir</figcaption>
+      </figure>
+      <div class="stack-lg">
+        <h2 class="display-l">A clínica está de volta a Porto Alegre</h2>
+        <hr class="rule">
+        <p>A Clínica Strunkis atende com equipe multidisciplinar: médicos, personal trainers,
+          psicólogos e estética no mesmo lugar. É por isso que o método consegue tratar
+          composição corporal e comportamento ao mesmo tempo.</p>
+        <p class="signature">Com amor, Aline Strunkis</p>
+        <div class="flow-gap">
+          <a class="btn" href="#recomendador">Agendar avaliação</a>
+          <a class="btn btn--ghost" href="parceiras.html">Sou nutricionista</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- B2B -->
+  <section class="sec sec--olive">
+    <div class="wrap cols-2">
+      <div class="stack-lg">
+        <h2 class="display-l">O método também forma nutricionistas</h2>
+        <hr class="rule">
+        <p>A rede Strunkis leva o método, o material de consultório e a linha Boost para
+          nutricionistas que querem trabalhar com composição corporal e protocolo de caneta
+          com respaldo. Brasil e exterior.</p>
+        <div class="flow-gap"><a class="btn btn--light" href="parceiras.html">Entrar para a rede</a></div>
+      </div>
+      <ul class="path__list" style="align-self:center">
+        <li>Formação no Método Strunkis e nos dois protocolos</li>
+        <li>Material de consultório e planos-base para adaptar</li>
+        <li>Condição de revenda e prescrição da linha Boost</li>
+        <li>Encaminhamento de pacientes por região</li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="wordmark" href="index.html" style="color:var(--on-dark)">
+          <b>Aline Strunkis</b><span style="color:var(--olive-300)">Nutrição de resultado</span>
+        </a>
+        <p class="small" style="margin-top:var(--s-4);max-width:32ch">Clínica Strunkis · Porto Alegre,
+          Rio Grande do Sul. Atendimento presencial e projetos online para todo o Brasil.</p>
+      </div>
+      <div>
+        <h3>Protocolos</h3>
+        <ul>
+          <li><a href="protocolo.html#painel-caneta">Com caneta</a></li>
+          <li><a href="protocolo.html#painel-natural">Sem medicação</a></li>
+          <li><a href="#metodo">O Método Strunkis</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Projetos</h3>
+        <ul>
+          <li><a href="curso.html">Strunkis Premium</a></li>
+          <li><a href="curso.html">Projeto Renascer</a></li>
+          <li><a href="curso.html">Strunkis Para Todos</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Parcerias</h3>
+        <ul>
+          <li><a href="parceiras.html">Rede de nutricionistas</a></li>
+          <li><a href="parceiras.html#revenda">Revenda Boost</a></li>
+          <li><a href="design-system.html">Sistema de design</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <p>© <span data-year></span> Aline dos Santos Strunkis Castro · CRN a informar</p>
+      <p style="max-width:60ch">Este site é conteúdo nutricional e educativo. Não prescreve, não
+        indica e não substitui medicamento, consulta médica ou acompanhamento profissional
+        individual. Análogos de GLP-1 são de prescrição médica.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+</body>
+</html>

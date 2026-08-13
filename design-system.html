@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sistema de design — Aline Strunkis</title>
+<meta name="description" content="Tokens, tipografia, componentes e regras de uso do sistema de design do site da nutricionista Aline Strunkis com a marca Boost Natural Foods.">
+<meta name="theme-color" content="#F6F3EC">
+<link rel="stylesheet" href="assets/styles.css">
+<style>
+  .ds-nav { position: sticky; top: 76px; align-self: start; display: grid; gap: 6px; }
+  .ds-nav a { text-decoration: none; font-size: .875rem; color: var(--ink-2); padding: 6px 0; border-bottom: 1px solid var(--paper-line); }
+  .ds-nav a:hover { color: var(--ink); border-bottom-color: var(--olive-600); }
+  .ds-layout { display: grid; grid-template-columns: 190px minmax(0,1fr); gap: clamp(24px,4vw,72px); align-items: start; }
+  @media (max-width: 900px) { .ds-layout { grid-template-columns: 1fr; } .ds-nav { position: static; grid-auto-flow: column; grid-auto-columns: max-content; overflow-x: auto; } }
+  .swatches { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px,1fr)); gap: var(--s-3); }
+  .sw { border: 1px solid var(--paper-line); border-radius: var(--r-sm); overflow: hidden; background: var(--paper-raised); }
+  .sw i { display: block; height: 64px; }
+  .sw span { display: block; padding: 10px 12px; font-size: .875rem; line-height: 1.45; }
+  .sw b { display: block; font-size: .875rem; font-weight: 700; }
+  .sw code { color: var(--ink-3); letter-spacing: .04em; }
+  .ds-block { border-top: 1px solid var(--paper-line); padding-top: var(--s-5); margin-top: var(--s-7); }
+  .ds-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px,1fr)); gap: var(--s-4); }
+  .demo { padding: var(--s-5); border: 1px solid var(--paper-line); border-radius: var(--r-sm); background: var(--paper-raised); display: grid; gap: var(--s-4); }
+  .spec { display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap; }
+  .spec code { color: var(--ink-3); }
+  .space-bar { background: var(--olive-600); height: 14px; border-radius: 2px; }
+  .icon-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(96px,1fr)); gap: var(--s-3); }
+  .icon-cell { display: grid; justify-items: center; gap: 8px; padding: 14px 6px; border: 1px solid var(--paper-line); border-radius: var(--r-sm); font-size: .875rem; color: var(--ink-3); background: var(--paper-raised); }
+  .icon-cell svg { width: 26px; height: 26px; color: var(--olive-700); }
+  .rules li { margin-bottom: 10px; }
+</style>
+</head>
+<body>
+<!--
+  seed a841c555 · FORM: padrão da categoria, no acabamento de clínica premium.
+  THESIS: a documentação usa o próprio sistema, então cada exemplo é o componente de verdade
+  e não uma imagem dele.
+  OWN-WORLD: mesmo papel, mesma oliva, mesmo fio dourado do site.
+  STORY: quem for construir a próxima página encontra o token, o componente e a regra de uso
+  no mesmo lugar. FIRST VIEWPORT: título, índice lateral fixo e a paleta já começando.
+  FORM: canônico. FINISH: unreviewed and undocumented is unfinished; this build ends with
+  the finish review, the verdict, and DESIGN.md
+-->
+<a class="skip" href="#main">Pular para o conteúdo</a>
+
+<header class="site-head">
+  <div class="wrap site-head__inner">
+    <a class="wordmark" href="index.html"><b>Aline Strunkis</b><span>Sistema de design</span></a>
+    <nav class="site-nav" aria-label="Principal">
+      <a href="index.html">Home</a>
+      <a href="protocolo.html">Protocolos</a>
+      <a href="curso.html">Curso</a>
+      <a href="parceiras.html">Rede</a>
+      <a href="design-system.html" aria-current="page">Sistema</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="sec wrap">
+  <div class="sec-head" style="max-width:none">
+    <h1 class="display-l">Sistema de design</h1>
+    <p class="lede" style="max-width:66ch">Off-white quente, campos de oliva profundo, fio dourado de um pixel e a Boost
+      como único acento quente. Tudo abaixo é o componente real, servido pelo mesmo CSS do site.</p>
+  </div>
+
+  <div class="ds-layout">
+    <nav class="ds-nav" aria-label="Seções do sistema">
+      <a href="#cor">Cor</a>
+      <a href="#tipografia">Tipografia</a>
+      <a href="#espaco">Espaço</a>
+      <a href="#elevacao">Elevação</a>
+      <a href="#movimento">Movimento</a>
+      <a href="#botoes">Botões</a>
+      <a href="#campos">Campos</a>
+      <a href="#navegacao">Navegação</a>
+      <a href="#conteudo">Conteúdo</a>
+      <a href="#icones">Ícones</a>
+      <a href="#regras">Regras</a>
+    </nav>
+
+    <div>
+      <!-- COR -->
+      <section id="cor">
+        <h2 class="display-m">Cor</h2>
+        <p class="small" style="margin-top:var(--s-3)">Estratégia: paleta completa com quatro papéis.
+          Papel é o fundo padrão; oliva ocupa regiões inteiras e nunca aparece como detalhe solto;
+          dourado só existe em fio, régua e marca; Boost é dona da própria faixa e de nenhuma outra.</p>
+
+        <div class="ds-block">
+          <h3>Papel</h3>
+          <div class="swatches" style="margin-top:var(--s-4)">
+            <div class="sw"><i style="background:#F6F3EC"></i><span><b>Papel</b><code>--paper · #F6F3EC</code><br>fundo padrão</span></div>
+            <div class="sw"><i style="background:#EDE8DD"></i><span><b>Papel afundado</b><code>--paper-sunk · #EDE8DD</code><br>faixas alternadas</span></div>
+            <div class="sw"><i style="background:#FFFDF8"></i><span><b>Papel levantado</b><code>--paper-raised · #FFFDF8</code><br>cartão e campo</span></div>
+            <div class="sw"><i style="background:#DED8C9"></i><span><b>Fio de papel</b><code>--paper-line · #DED8C9</code><br>borda de 1px</span></div>
+          </div>
+        </div>
+
+        <div class="ds-block">
+          <h3>Oliva</h3>
+          <div class="swatches" style="margin-top:var(--s-4)">
+            <div class="sw"><i style="background:#161D16"></i><span><b>950</b><code>#161D16</code><br>rodapé</span></div>
+            <div class="sw"><i style="background:#202A20"></i><span><b>900</b><code>#202A20</code><br>campo escuro · 13,4:1</span></div>
+            <div class="sw"><i style="background:#2C382A"></i><span><b>800</b><code>#2C382A</code><br>botão primário · 11,1:1</span></div>
+            <div class="sw"><i style="background:#3A4A37"></i><span><b>700</b><code>#3A4A37</code><br>foco e texto em tinta clara</span></div>
+            <div class="sw"><i style="background:#4C5F47"></i><span><b>600</b><code>#4C5F47</code><br>borda de destaque</span></div>
+            <div class="sw"><i style="background:#B4C2AA"></i><span><b>300</b><code>#B4C2AA</code><br>texto de apoio no escuro</span></div>
+            <div class="sw"><i style="background:#E6EADE"></i><span><b>100</b><code>#E6EADE</code><br>fundo de pílula</span></div>
+          </div>
+        </div>
+
+        <div class="ds-block">
+          <h3>Dourado e Boost</h3>
+          <div class="swatches" style="margin-top:var(--s-4)">
+            <div class="sw"><i style="background:#A9843F"></i><span><b>Dourado 500</b><code>#A9843F</code><br>fio e régua · 3,1:1, nunca texto pequeno</span></div>
+            <div class="sw"><i style="background:#8A6A2F"></i><span><b>Dourado 600</b><code>#8A6A2F</code><br>rótulo sobre papel · 4,5:1</span></div>
+            <div class="sw"><i style="background:#D9BE84"></i><span><b>Dourado 300</b><code>#D9BE84</code><br>sobre oliva · 8,2:1</span></div>
+            <div class="sw"><i style="background:#E2571F"></i><span><b>Boost 500</b><code>#E2571F</code><br>campo e gráfico</span></div>
+            <div class="sw"><i style="background:#A33714"></i><span><b>Boost 700</b><code>#A33714</code><br>botão e texto · 6,1:1</span></div>
+            <div class="sw"><i style="background:#FBE3D6"></i><span><b>Boost 100</b><code>#FBE3D6</code><br>fundo de destaque</span></div>
+          </div>
+        </div>
+
+        <div class="ds-block">
+          <h3>Tinta e estado</h3>
+          <div class="swatches" style="margin-top:var(--s-4)">
+            <div class="sw"><i style="background:#1A1F19"></i><span><b>Tinta</b><code>--ink · #1A1F19</code><br>15,1:1 no papel</span></div>
+            <div class="sw"><i style="background:#47513F"></i><span><b>Tinta 2</b><code>--ink-2 · #47513F</code><br>7,5:1</span></div>
+            <div class="sw"><i style="background:#626C58"></i><span><b>Tinta 3</b><code>--ink-3 · #626C58</code><br>5,0:1 · mínimo permitido</span></div>
+            <div class="sw"><i style="background:#A32C2C"></i><span><b>Erro</b><code>#A32C2C</code><br>6,4:1</span></div>
+            <div class="sw"><i style="background:#2F6B46"></i><span><b>Sucesso</b><code>#2F6B46</code><br>5,7:1</span></div>
+          </div>
+          <p class="micro" style="margin-top:var(--s-4)">Texto secundário nunca é cinza neutro: sai
+            sempre da mesma matiz verde do fundo. Nenhum par de texto do site fica abaixo de 4,5:1.</p>
+        </div>
+      </section>
+
+      <!-- TIPOGRAFIA -->
+      <section id="tipografia" style="margin-top:var(--s-9)">
+        <h2 class="display-m">Tipografia</h2>
+        <p class="small" style="margin-top:var(--s-3)">Bodoni Moda variável no display, Hanken Grotesk
+          variável no texto e na interface. As duas hospedadas no próprio projeto, sem CDN.</p>
+
+        <div class="ds-block">
+          <div class="spec"><code>.display-xl · Bodoni 500 · clamp(2.5rem → 4.5rem) · -0.025em · 1.13</code></div>
+          <p class="display-xl" style="margin-top:var(--s-3)">Perder gordura</p>
+        </div>
+        <div class="ds-block">
+          <div class="spec"><code>.display-l · Bodoni 500 · clamp(2rem → 3.6rem) · 1.08</code></div>
+          <p class="display-l" style="margin-top:var(--s-3)">Sem perder <em>massa magra</em></p>
+        </div>
+        <div class="ds-block">
+          <div class="spec"><code>.display-m · Bodoni 500 · clamp(1.55rem → 2.4rem) · 1.14</code></div>
+          <p class="display-m" style="margin-top:var(--s-3)">A balança mente. A bioimpedância não.</p>
+        </div>
+        <div class="ds-block">
+          <div class="spec"><code>h3 / .h3 · Hanken 650 · clamp(1.06rem → 1.31rem)</code></div>
+          <h3 style="margin-top:var(--s-3)">Proteína primeiro: a ordem do prato muda</h3>
+        </div>
+        <div class="ds-block">
+          <div class="spec"><code>.lede · Hanken 400 · até 1.25rem · tinta 2</code></div>
+          <p class="lede" style="margin-top:var(--s-3)">Essa frase é o Método Strunkis inteiro. Há doze
+            anos ela orienta cada plano alimentar que sai da clínica.</p>
+        </div>
+        <div class="ds-block">
+          <div class="spec"><code>corpo · Hanken 400 · 17px/1.62 · medida de 68ch</code></div>
+          <p style="margin-top:var(--s-3)">Com análogos de GLP-1 a ingestão despenca sem esforço, e é
+            justamente aí que a massa magra vai junto: come-se menos de tudo, inclusive proteína. O
+            protocolo com caneta existe para garantir que, dentro de um volume de comida menor, a
+            proteína e os micronutrientes continuem entrando.</p>
+        </div>
+        <div class="ds-block">
+          <div class="spec"><code>.small · 15px</code> <code>.micro · 13px</code> <code>.label · 12px/0.16em maiúsculas</code></div>
+          <p class="small" style="margin-top:var(--s-3)">Texto de apoio dentro de cartão e legenda.</p>
+          <p class="micro">Nota de rodapé, aviso de placeholder, valor de exemplo.</p>
+          <p class="label" style="margin-top:var(--s-2)">Rótulo de seção</p>
+        </div>
+        <div class="ds-block">
+          <p class="micro">Números em versalete tabular por padrão (<code>font-variant-numeric: tabular-nums</code>),
+            para que 60 dias, 12x e R$ 1.997,00 alinhem em coluna: <b>0123456789 · R$ 1.997,00 · 12x</b></p>
+        </div>
+      </section>
+
+      <!-- ESPAÇO -->
+      <section id="espaco" style="margin-top:var(--s-9)">
+        <h2 class="display-m">Espaço</h2>
+        <p class="small" style="margin-top:var(--s-3)">Escala de 4 em 4 na base, dobrando no alto.
+          Uma seção respira <code>clamp(56px, 9vw, 128px)</code> em cima e embaixo. Sempre mais
+          espaço acima de um título do que abaixo dele.</p>
+        <div class="ds-block" style="display:grid;gap:10px">
+          <div class="spec"><code style="width:120px;display:inline-block">--s-1 · 4px</code><i class="space-bar" style="width:4px"></i></div>
+          <div class="spec"><code style="width:120px;display:inline-block">--s-2 · 8px</code><i class="space-bar" style="width:8px"></i></div>
+          <div class="spec"><code style="width:120px;display:inline-block">--s-3 · 12px</code><i class="space-bar" style="width:12px"></i></div>
+          <div class="spec"><code style="width:120px;display:inline-block">--s-4 · 16px</code><i class="space-bar" style="width:16px"></i></div>
+          <div class="spec"><code style="width:120px;display:inline-block">--s-5 · 24px</code><i class="space-bar" style="width:24px"></i></div>
+          <div class="spec"><code style="width:120px;display:inline-block">--s-6 · 32px</code><i class="space-bar" style="width:32px"></i></div>
+          <div class="spec"><code style="width:120px;display:inline-block">--s-7 · 48px</code><i class="space-bar" style="width:48px"></i></div>
+          <div class="spec"><code style="width:120px;display:inline-block">--s-8 · 64px</code><i class="space-bar" style="width:64px"></i></div>
+          <div class="spec"><code style="width:120px;display:inline-block">--s-9 · 96px</code><i class="space-bar" style="width:96px"></i></div>
+          <div class="spec"><code style="width:120px;display:inline-block">--s-10 · 128px</code><i class="space-bar" style="width:128px"></i></div>
+        </div>
+        <p class="micro" style="margin-top:var(--s-4)">Página com no máximo 1280px e goteira
+          <code>clamp(20px, 5vw, 72px)</code>. Raios: 2px em selo, 4px em campo e placa, 8px em
+          cartão, pílula só em botão e etiqueta.</p>
+      </section>
+
+      <!-- ELEVAÇÃO -->
+      <section id="elevacao" style="margin-top:var(--s-9)">
+        <h2 class="display-m">Elevação</h2>
+        <p class="small" style="margin-top:var(--s-3)">Três níveis, todos com deslocamento vertical e
+          desfoque. Sombra sem deslocamento é decoração e não entra no sistema.</p>
+        <div class="ds-grid" style="margin-top:var(--s-5)">
+          <div class="demo" style="box-shadow:var(--e-1)"><b>e-1</b><code class="micro">campo, pílula ativa</code></div>
+          <div class="demo" style="box-shadow:var(--e-2)"><b>e-2</b><code class="micro">cartão em hover, menu</code></div>
+          <div class="demo" style="box-shadow:var(--e-3)"><b>e-3</b><code class="micro">resultado do recomendador</code></div>
+        </div>
+      </section>
+
+      <!-- MOVIMENTO -->
+      <section id="movimento" style="margin-top:var(--s-9)">
+        <h2 class="display-m">Movimento</h2>
+        <p class="small" style="margin-top:var(--s-3)">Um movimento autoral, não efeitos espalhados:
+          o conteúdo sobe 10px e entra em 380ms, com atraso escalonado de 40ms entre irmãos.
+          Curva de saída exponencial <code>cubic-bezier(.16,1,.3,1)</code>. Tudo desaparece sob
+          <code>prefers-reduced-motion</code>, e nada fica invisível se o JavaScript falhar.</p>
+        <div class="ds-grid" style="margin-top:var(--s-5)">
+          <div class="demo"><b>180ms</b><code class="micro">--t-fast · hover, foco, cor</code></div>
+          <div class="demo"><b>420ms</b><code class="micro">--t-mid · aba, sombra, borda</code></div>
+          <div class="demo"><b>760ms</b><code class="micro">--t-slow · passo do quiz, barra de progresso</code></div>
+        </div>
+      </section>
+
+      <!-- BOTÕES -->
+      <section id="botoes" style="margin-top:var(--s-9)">
+        <h2 class="display-m">Botões</h2>
+        <p class="small" style="margin-top:var(--s-3)">Altura de 52px, pílula, rótulo que nomeia a ação.
+          Um primário por região.</p>
+        <div class="ds-block">
+          <div class="flow-gap">
+            <button class="btn" type="button">Agendar avaliação</button>
+            <button class="btn btn--ghost" type="button">Ver os projetos</button>
+            <button class="btn btn--boost" type="button">Ver o combo Boost</button>
+            <button class="btn btn--sm" type="button">Pequeno</button>
+            <button class="btn" type="button" disabled>Desabilitado</button>
+          </div>
+        </div>
+        <div class="ds-block" style="background:var(--olive-900);padding:var(--s-6);border-radius:var(--r-md);border:0">
+          <div class="sec--olive"><div class="flow-gap">
+            <button class="btn btn--light" type="button">Sobre oliva</button>
+            <button class="btn btn--ghost" type="button">Secundário no escuro</button>
+          </div></div>
+        </div>
+        <div class="ds-block">
+          <a class="link-arrow" href="#botoes">Link de avanço <span data-icon="arrow"></span></a>
+        </div>
+      </section>
+
+      <!-- CAMPOS -->
+      <section id="campos" style="margin-top:var(--s-9)">
+        <h2 class="display-m">Campos e estados</h2>
+        <div class="ds-block" style="display:grid;gap:var(--s-5);max-width:520px">
+          <div class="field">
+            <label for="d1">Padrão</label>
+            <input class="input" id="d1" type="text" placeholder="Como está no seu documento">
+          </div>
+          <div class="field">
+            <label for="d2">Com erro</label>
+            <input class="input" id="d2" type="email" value="voce@" aria-invalid="true">
+            <p class="field-msg">Esse e-mail está incompleto. Confira o trecho depois do @.</p>
+          </div>
+          <div class="field">
+            <label for="d3">Resolvido</label>
+            <input class="input" id="d3" type="email" value="voce@exemplo.com.br">
+            <p class="field-msg field-msg--ok">E-mail confirmado.</p>
+          </div>
+          <div class="field">
+            <label for="d4">Desabilitado</label>
+            <input class="input" id="d4" type="text" value="CRN em conferência" disabled>
+          </div>
+          <div class="field">
+            <label for="d5">Seleção</label>
+            <select class="select" id="d5"><option>Sim, com prescrição médica</option><option>Não uso</option></select>
+          </div>
+          <label class="check"><input type="checkbox" checked><span>Quero receber os avisos da turma no WhatsApp.</span></label>
+        </div>
+        <p class="micro" style="margin-top:var(--s-4)">A mensagem de erro nomeia o problema e o
+          conserto. Nunca "campo inválido".</p>
+      </section>
+
+      <!-- NAVEGAÇÃO -->
+      <section id="navegacao" style="margin-top:var(--s-9)">
+        <h2 class="display-m">Navegação e filtro</h2>
+        <div class="ds-block" style="display:grid;gap:var(--s-5)">
+          <div class="tabs" role="tablist" aria-label="Exemplo">
+            <button class="tab" role="tab" aria-selected="true" type="button">Com caneta</button>
+            <button class="tab" role="tab" aria-selected="false" type="button" tabindex="-1">Sem medicação</button>
+          </div>
+          <div class="flow-gap">
+            <button class="chip" type="button" aria-pressed="true">Todos</button>
+            <button class="chip" type="button" aria-pressed="false">Com caneta</button>
+            <button class="chip" type="button" aria-pressed="false">Sem medicação</button>
+          </div>
+          <div class="flow-gap">
+            <span class="tag">Etiqueta</span>
+            <span class="tag tag--gold">Destaque</span>
+            <span class="tag tag--boost">Boost</span>
+            <span class="tag tag--outline">Neutra</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTEÚDO -->
+      <section id="conteudo" style="margin-top:var(--s-9)">
+        <h2 class="display-m">Blocos de conteúdo</h2>
+        <div class="ds-block" style="display:grid;gap:var(--s-5)">
+          <article class="offer" style="max-width:420px">
+            <span class="tag">60 dias · online</span>
+            <h3 class="display-m">Strunkis Premium</h3>
+            <p class="small">Mentoria diária no Telegram, com três planos alimentares.</p>
+            <ul class="offer__list">
+              <li><span data-icon="check"></span>Mentoria diária durante os 60 dias</li>
+              <li><span data-icon="check"></span>+300 receitas em e-books</li>
+            </ul>
+            <div class="offer__foot">
+              <div class="price"><b>Sob consulta</b><span class="micro">até 12x</span></div>
+              <a class="btn btn--ghost btn--block" href="curso.html">Ver detalhes</a>
+            </div>
+          </article>
+
+          <figure class="plate plate--branch ratio-32" style="max-width:420px">
+            <img src="assets/img/exemplo.webp" alt="Exemplo de placa de imagem">
+            <figcaption class="plate__note" hidden><span data-icon="camera"></span>Foto · substituir</figcaption>
+          </figure>
+          <p class="micro" style="max-width:52ch">Placa de imagem: enquanto o arquivo real não existe
+            em <code>assets/img/</code>, a placa desenhada segura a composição e se identifica. Basta
+            salvar a foto com o nome esperado que ela assume o lugar sozinha.</p>
+
+          <div class="notice" style="max-width:560px">
+            <span data-icon="info"></span>
+            <p>Aviso: usado para o que ainda não está confirmado e para o limite clínico do site.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ÍCONES -->
+      <section id="icones" style="margin-top:var(--s-9)">
+        <h2 class="display-m">Ícones</h2>
+        <p class="small" style="margin-top:var(--s-3)">Desenhados na grade de 24 com traço de 1,5 e
+          ponta arredondada. Injetados por <code>data-icon</code>. Nenhum emoji e nenhum glifo Unicode
+          faz papel de ícone.</p>
+        <div class="icon-grid" style="margin-top:var(--s-5)">
+          <div class="icon-cell"><span data-icon="arrow"></span>arrow</div>
+          <div class="icon-cell"><span data-icon="check"></span>check</div>
+          <div class="icon-cell"><span data-icon="pen"></span>pen</div>
+          <div class="icon-cell"><span data-icon="leaf"></span>leaf</div>
+          <div class="icon-cell"><span data-icon="clinic"></span>clinic</div>
+          <div class="icon-cell"><span data-icon="scale"></span>scale</div>
+          <div class="icon-cell"><span data-icon="camera"></span>camera</div>
+          <div class="icon-cell"><span data-icon="info"></span>info</div>
+          <div class="icon-cell"><span data-icon="lock"></span>lock</div>
+          <div class="icon-cell"><span data-icon="star"></span>star</div>
+          <div class="icon-cell"><span data-icon="users"></span>users</div>
+          <div class="icon-cell"><span data-icon="globe"></span>globe</div>
+          <div class="icon-cell"><span data-icon="box"></span>box</div>
+          <div class="icon-cell"><span data-icon="menu"></span>menu</div>
+          <div class="icon-cell"><span data-icon="close"></span>close</div>
+        </div>
+      </section>
+
+      <!-- REGRAS -->
+      <section id="regras" style="margin-top:var(--s-9)">
+        <h2 class="display-m">Regras de uso</h2>
+        <ul class="path__list rules" style="margin-top:var(--s-4)">
+          <li>Oliva ocupa região inteira. Não existe detalhe oliva solto sobre papel.</li>
+          <li>Dourado é fio, régua e marca. Nunca texto pequeno sobre papel: 3,1:1 não passa.</li>
+          <li>Boost manda na faixa dela. Fora da faixa, laranja só aparece em botão de compra do kit.</li>
+          <li>Um botão primário por região visível.</li>
+          <li>Nenhuma seção começa com rótulo acima do título. O título carrega o próprio peso.</li>
+          <li>Preço, número de pacientes, tempo de carreira e depoimento nominal não se inventam:
+            entram como "sob consulta" ou como aviso de placeholder até virem da Aline.</li>
+          <li>Toda foto de antes e depois precisa de legenda com trilha e tempo, texto alternativo
+            e autorização de uso de imagem.</li>
+          <li>O site nunca prescreve, indica ou ajusta medicamento. O aviso de GLP-1 fica em todo rodapé.</li>
+          <li>Alvo de toque mínimo de 44px e corpo de texto nunca abaixo de 17px.</li>
+        </ul>
+      </section>
+    </div>
+  </div>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-bottom" style="margin-top:0;border:0;padding-top:0">
+      <a class="wordmark" href="index.html" style="color:var(--on-dark)">
+        <b>Aline Strunkis</b><span style="color:var(--olive-300)">Sistema de design</span></a>
+      <p>Versão 1 · protótipo. Todo componente desta página é servido pelo mesmo
+        <code>assets/styles.css</code> das páginas do site.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+</body>
+</html>
