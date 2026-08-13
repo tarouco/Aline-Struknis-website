@@ -30,6 +30,10 @@
   for = "/*"
   [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"
+    # TEMPORÁRIO — enquanto o site for protótipo (fotos, preços e CRN ainda
+    # são placeholders). Remover esta linha antes da publicação oficial,
+    # senão o site nunca aparece nas buscas.
+    X-Robots-Tag = "noindex"
     X-Content-Type-Options = "nosniff"
     X-Frame-Options = "SAMEORIGIN"
     Referrer-Policy = "strict-origin-when-cross-origin"
